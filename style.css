@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.top-wrapper {
+  height: 50vh;
+}
+
+.title {
+  margin-top: 75px;
+  font-size: 48px;
+  text-align: center;
+}
+
+.make-up-your-mind {
+  margin-top: 75px;
+  font-size: 24px;
+  text-align: center;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  box-shadow: 0 0 15px 0 black;
+  border-radius: 5px;
+}
+
+.pick {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.play {
+  width: 200px;
+  height: 65px;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 3px solid black;
+  font-size: 28px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.play:hover {
+  background-color: black;
+  color: white;
+}
+
+.wrapper {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.padding h1,
+.padding h2,
+.padding p {
+  padding: 10px;
+}
+
+.game-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overall-results {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fas {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.overall-results,
+.game-results {
+  box-shadow: 0 0 5px 0 black;
+  border-radius: 15px;
+  width: 325px;
+  padding: 25px;
+  border: 2px solid black;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="title">Rock</title>
+  <link rel="icon" href="./img/rock.png" id="favicon"/>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/df5ba7aba8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="top-wrapper">
+    <h1 class="title">Rock Paper Scissors</h1>
+    <p class="make-up-your-mind">Pick:</p>
+
+    <section class="pick">
+      <img data-option="rock" src="img/rock.png" alt="" title="Rock" />
+      <img data-option="paper" src="img/paper.png" alt="" title="Paper" />
+      <img data-option="scissors" src="img/scissors.png" alt="" title="Scissors" />
+    </section>
+  </div>
+
+  <button class="play">Let's play!</button>
+
+  <div class="bottom-wrapper">
+    <div class="wrapper">
+      <section class="game-results padding">
+        <h1>Game result</h1>
+        <p>Your choice: <span class="your-choice"></span></p>
+        <p>Opponent: <span class="opponent"></span></p>
+        <h2>Result: <span class="game-winner"></span> </span></h2>
+      </section>
+
+      <section class="overall-results padding">
+        <i class="fas fa-times"></i>
+        <h1>Overall results</h1>
+        <p>Game count: <span class="game-count">0</span></p>
+        <p>Wins: <span class="wins">0</span></p>
+        <p>Losses: <span class="losses">0</span></p>
+        <p>Draws: <span class="draws">0</span></p>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
