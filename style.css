@@ -111,6 +111,13 @@ img {
   border: 2px solid black;
 }
 
+footer {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  padding: 5px 0;
+}
+
 @media (max-width: 1024px) {
   img {
     width: 125px;
@@ -135,10 +142,10 @@ img {
     top: 10px;
   }
 
-  .overall-results,
+  /* .overall-results,
   .game-results {
     width: auto;
-  }
+  } */
 }
 
 @media (max-width: 640px) {
@@ -150,6 +157,10 @@ img {
     font-size: 18px;
   }
 
+  .pick {
+    margin-top: 75px;
+  }
+
   img {
     width: 100px;
     height: 100px;
@@ -157,6 +168,16 @@ img {
 
   .play {
     width: auto;
-    height: 50px;
+    height: auto;
+    border: 2px solid black;
+    padding: 10px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .game-results {
+    margin-bottom: 50px;
   }
 }
