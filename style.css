@@ -13,6 +13,7 @@ body {
 
 .top-wrapper {
   height: 50vh;
+  position: relative;
 }
 
 .title {
@@ -42,11 +43,16 @@ img {
   margin-top: 100px;
 }
 
+.mid {
+  position: relative;
+  height: 50px;
+}
+
 .play {
   width: 200px;
   height: 65px;
   display: block;
-  margin: 0 auto;
+  margin: 75px auto 0;
   background-color: transparent;
   border-radius: 5px;
   border: 3px solid black;
@@ -62,13 +68,10 @@ img {
 }
 
 .wrapper {
-  position: absolute;
-  bottom: 5%;
-  left: 0;
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 100px 0 100px;
   align-items: center;
 }
 
@@ -103,7 +106,57 @@ img {
 .game-results {
   box-shadow: 0 0 5px 0 black;
   border-radius: 15px;
-  width: 325px;
+  width: 250px;
   padding: 25px;
   border: 2px solid black;
+}
+
+@media (max-width: 1024px) {
+  img {
+    width: 125px;
+    height: 125px;
+  }
+
+  .play:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .top-wrapper {
+    height: 50vh;
+  }
+
+  .bottom-wrapper {
+    height: 50vh;
+  }
+
+  .fas {
+    right: 10px;
+    top: 10px;
+  }
+
+  .overall-results,
+  .game-results {
+    width: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .make-up-your-mind {
+    font-size: 18px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .play {
+    width: auto;
+    height: 50px;
+  }
 }
