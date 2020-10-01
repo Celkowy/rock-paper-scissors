@@ -176,6 +176,11 @@ footer {
   .game-results {
     margin-bottom: 50px;
   }
+
+  .overall-results,
+  .game-results {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -189,5 +194,25 @@ footer {
 
   .play {
     margin-top: 50px;
+  }
+}
+
+@media (max-width: 360px) {
+  img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .play {
+    font-size: 18px;
+  }
+
+  .overall-results,
+  .game-results {
+    box-shadow: 0 0 5px 0 black;
+    border-radius: 15px;
+    width: 250px;
+    padding: 10px;
+    border: 2px solid black;
   }
 }
