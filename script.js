@@ -13,7 +13,7 @@ const hands = [...document.querySelectorAll('.pick img')];
 const yourChoice = document.querySelector('.your-choice');
 const opponent = document.querySelector('.opponent');
 const gameWinner = document.querySelector('.game-winner');
-const clearOverallResults = document.querySelector('.fas');
+const clearOverallResults = document.querySelector('.refresh');
 const gameCount = document.querySelector('.game-count');
 const showWins = document.querySelector('.wins');
 const showLosses = document.querySelector('.losses');
@@ -23,20 +23,20 @@ const faviconsTable = ['./img/rock.png', './img/paper.png', './img/scissors.png'
 const tiitle = document.getElementById('title')
 const titleTable = ['Rock', 'Paper', 'Scissors']
 
-const clearShadowBox = function () {
+const clearShadowBox =  () => {
   hands.forEach(hand => hand.style.boxShadow = "");
 }
 
-const boldText = function(element){
+const boldText = element => {
   return element.style.fontWeight = "bold"
 }
 
-const fillTextContent = function(element, value){
+const fillTextContent = (element, value) => {
   return element.textContent = value;
 }
 
 let i=0;
-const changeTitleAndFavicon = function(){
+const changeTitleAndFavicon = () => {
   if(i>2) i=0;
     favicon.setAttribute("href", faviconsTable[i]);
     tiitle.textContent = titleTable[i];
@@ -46,20 +46,20 @@ const changeTitleAndFavicon = function(){
 changeTitleAndFavicon();
 setInterval(changeTitleAndFavicon, 2000);
 
-const handSelection = function () {
-  hand.playerHand = this.dataset.option;
+const handSelection = ({target}) => {
+  hand.playerHand = target.dataset.option;
   clearShadowBox();
-  this.style.boxShadow = "0 0 0 5px red";
-  yourChoice.innerHTML = this.dataset.option.bold();
+  target.style.boxShadow = "0 0 0 5px red";
+  yourChoice.innerHTML = target.dataset.option.bold();
   fillTextContent(opponent, "");
   fillTextContent(gameWinner, "");
 }
 
-const aiChoice = function () {
+const aiChoice = () => {
   return hands[Math.floor(Math.random() * 3)].dataset.option;
 }
 
-const checkResult = function (player, ai) {
+const checkResult = (player, ai) => {
   
   if ((player === 'paper' && ai === 'rock') || (player === 'rock' && ai === 'scissors') || (player === 'scissors' && ai === 'paper')) {
     gameStats.wins++;
@@ -73,7 +73,7 @@ const checkResult = function (player, ai) {
   }
 }
 
-const displayGameResults = function (playerHand, aiHand, winner) {
+const displayGameResults = (playerHand, aiHand, winner) => {
 
   fillTextContent(yourChoice, playerHand);
   boldText(yourChoice);
@@ -95,7 +95,7 @@ const displayGameResults = function (playerHand, aiHand, winner) {
   }
 }
 
-const displayOverallResults = function (wins, losses, draws) {
+const displayOverallResults = (wins, losses, draws) => {
   
   const boldTable = [gameCount, showWins, showLosses, showDraws];
 
@@ -109,12 +109,12 @@ const displayOverallResults = function (wins, losses, draws) {
   fillTextContent(showDraws, draws);
 }
 
-const clearGameResults = function () {
+const clearGameResults = () => {
   fillTextContent(hand.playerHand, "");
   fillTextContent(hand.aiHand, "");
 }
 
-clearOverallResults.addEventListener('click', function () {
+clearOverallResults.addEventListener('click', () => {
 
   gameStats.wins = 0;
   gameStats.losses = 0;
@@ -136,8 +136,6 @@ clearOverallResults.addEventListener('click', function () {
 
 hands.forEach(hand => hand.addEventListener('click', handSelection));
 
-document.querySelector('.play').addEventListener('click', startGame);
-
 function startGame() {
 
   if (!hand.playerHand) return alert('Pick first!');
@@ -149,3 +147,5 @@ function startGame() {
   displayOverallResults(gameStats.wins, gameStats.losses, gameStats.draws);
   hand.playerHand = "";
 }
+
+document.querySelector('.play').addEventListener('click', startGame);

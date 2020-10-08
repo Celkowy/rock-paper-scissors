@@ -36,6 +36,12 @@ img {
   border-radius: 5px;
 }
 
+.refresh {
+  width: auto;
+  height: auto;
+  box-shadow: 0 0 0 0;
+}
+
 .pick {
   display: flex;
   flex-direction: row;
@@ -94,10 +100,11 @@ img {
   align-items: center;
 }
 
-.fas {
+.refresh {
   position: absolute;
-  right: 15px;
-  top: 15px;
+  width: 30px;
+  right: 7px;
+  top: 7px;
   font-size: 28px;
   cursor: pointer;
 }
@@ -135,11 +142,6 @@ footer {
 
   .bottom-wrapper {
     height: 50vh;
-  }
-
-  .fas {
-    right: 10px;
-    top: 10px;
   }
 }
 
