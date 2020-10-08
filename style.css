@@ -36,12 +36,6 @@ img {
   border-radius: 5px;
 }
 
-.refresh {
-  width: auto;
-  height: auto;
-  box-shadow: 0 0 0 0;
-}
-
 .pick {
   display: flex;
   flex-direction: row;
@@ -101,12 +95,12 @@ img {
 }
 
 .clear-results {
-  display: block;
   position: absolute;
-  right: 12px;
-  top: 12px;
-  font-size: 22px;
-  color: black;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 0 0;
+  right: 7px;
+  top: 7px;
   cursor: pointer;
 }
 
