@@ -100,12 +100,13 @@ img {
   align-items: center;
 }
 
-.refresh {
+.clear-results {
+  display: block;
   position: absolute;
-  width: 30px;
-  right: 7px;
-  top: 7px;
-  font-size: 28px;
+  right: 12px;
+  top: 12px;
+  font-size: 22px;
+  color: black;
   cursor: pointer;
 }
 
