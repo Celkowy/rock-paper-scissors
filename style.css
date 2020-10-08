@@ -5,15 +5,21 @@
   box-sizing: border-box;
 }
 
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Lato', sans-serif;
   max-width: 1440px;
   margin: 0 auto;
 }
 
-.top-wrapper {
-  height: 50vh;
-  position: relative;
+.wrap-for-footer {
+  flex: 1 0 auto;
 }
 
 .title {
@@ -114,7 +120,7 @@ img {
 }
 
 footer {
-  display: block;
+  flex-shrink: 0;
   text-align: center;
   font-size: 11px;
   padding: 5px 0;
